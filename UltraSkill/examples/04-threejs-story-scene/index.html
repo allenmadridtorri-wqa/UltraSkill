@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UltraSkill Example 04 — The Observatory Vault (LOW Preset Ready)</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      body {
+        margin: 0;
+        background: #090b10;
+        color: #eef2f7;
+        overflow: hidden;
+      }
+      #viewport {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+      }
+      .hud-safe {
+        position: fixed;
+        inset: 36px 48px;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .top-bar, .story-card {
+        pointer-events: auto;
+        background: rgba(10, 13, 19, 0.84);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        padding: 14px 18px;
+        max-width: 540px;
+      }
+      .top-bar {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        max-width: fit-content;
+      }
+      .choices {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 12px;
+      }
+      button, select {
+        background: #182030;
+        color: #f4f7fb;
+        border: 1px solid #3c4d6e;
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      button:focus-visible, select:focus-visible {
+        outline: 2px solid #f09c38;
+        outline-offset: 2px;
+      }
+      .telemetry {
+        font-variant-numeric: tabular-nums;
+        font-size: 13px;
+        color: #9fb0c7;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="viewport" aria-label="3D Observatory Vault Interactive Scene"></canvas>
+    <main class="hud-safe">
+      <header class="top-bar">
+        <label for="preset-select">Quality Preset:</label>
+        <select id="preset-select">
+          <option value="LOW" selected>LOW (1 GB Intel UHD / 720p)</option>
+          <option value="MEDIUM">MEDIUM (1080p)</option>
+          <option value="HIGH">HIGH (Dedicated GPU)</option>
+        </select>
+        <button id="rewind-btn" type="button">Rewind Step</button>
+        <span id="telemetry-readout" class="telemetry">Preset: LOW | Draws: 4 | VRAM: 28 MB</span>
+      </header>
+      <section class="story-card" aria-live="polite">
+        <h1 id="story-title" style="margin: 0 0 6px; font-size: 20px;">The Observatory Vault</h1>
+        <p id="story-body" style="margin: 0; line-height: 1.45;"></p>
+        <div id="story-choices" class="choices"></div>
+      </section>
+    </main>
+    <script type="module" src="./scene_story.js"></script>
+  </body>
+</html>

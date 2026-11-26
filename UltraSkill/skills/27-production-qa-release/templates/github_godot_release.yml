@@ -1,0 +1,68 @@
+name: Cloud Godot 4 Windows & Web Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: "Manual version label (e.g., v1.0.0-rc1)"
+        required: false
+        default: "v1.0.0-dev"
+
+env:
+  GODOT_VERSION: "4.3"
+  GAME_NAME: "UltraGame"
+
+jobs:
+  export-builds:
+    name: Build Windows (.exe) & Web (.zip) in Cloud
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Set up Python 3.12 for pre-release validation
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Headless Godot 4 & Export Templates
+        run: |
+          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+          curl -sSL "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip" -o godot.zip
+          unzip -q godot.zip
+          sudo mv Godot_v${GODOT_VERSION}-stable_linux.x86_64 /usr/local/bin/godot
+          sudo chmod +x /usr/local/bin/godot
+          curl -sSL "https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz" -o templates.tpz
+          unzip -q templates.tpz
+          mv templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable/
+          rm -rf godot.zip templates.tpz templates
+
+      - name: Export Windows Desktop (x86_64) & Web (HTML5/WASM)
+        run: |
+          mkdir -p build/windows build/web dist
+          godot --headless --export-release "Windows Desktop" "build/windows/${GAME_NAME}.exe"
+          godot --headless --export-release "Web" "build/web/index.html"
+
+      - name: Package & Audit Release Zips
+        run: |
+          VERSION="${GITHUB_REF_NAME:-${{ github.event.inputs.release_version }}}"
+          (cd build/windows && zip -r "../../dist/${GAME_NAME}-${VERSION}-win64.zip" .)
+          (cd build/web && zip -r "../../dist/${GAME_NAME}-${VERSION}-web.zip" .)
+          (cd dist && sha256sum *.zip > SHA256SUMS.txt)
+          cat dist/SHA256SUMS.txt
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ env.GAME_NAME }}-release-packages"
+          path: dist/*
+          retention-days: 30

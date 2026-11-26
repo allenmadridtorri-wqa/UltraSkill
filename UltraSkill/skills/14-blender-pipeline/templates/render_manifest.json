@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "project_slug": "example_cycles_optix_job",
+  "blend_file": "scene_final.blend",
+  "compute_backend": "OPTIX",
+  "gpu_model": "NVIDIA Tesla T4",
+  "preset": "FINAL",
+  "view_transform": "AgX",
+  "resolution_x": 1920,
+  "resolution_y": 1080,
+  "start_frame": 1,
+  "end_frame": 3,
+  "frame_step": 1,
+  "format": "PNG",
+  "output_dir": "/content/drive/MyDrive/ultraskill_renders/shot01/frames",
+  "benchmark": {
+    "tested_frames": [1, 2, 3],
+    "mean_frame_seconds": 14.2,
+    "estimated_total_hours": 0.012,
+    "peak_vram_mb": 3420,
+    "approved_by_user": true
+  },
+  "updated_utc": "2026-11-26T04:00:00+00:00",
+  "frames": {
+    "1": {
+      "file": "frame_0001.png",
+      "status": "COMPLETED",
+      "bytes": 8421904,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "render_seconds": 14.12,
+      "completed_utc": "2026-11-26T04:00:15+00:00"
+    }
+  }
+}

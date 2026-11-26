@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "default_fallback": "LOW",
+  "presets": {
+    "LOW": {
+      "label": "Low (4 GB RAM / Intel UHD Laptop Safe)",
+      "target_fps": 30,
+      "max_frame_time_ms": 33.33,
+      "max_render_height_px": 720,
+      "max_pixel_ratio": 1.0,
+      "antialias": false,
+      "power_preference": "low-power",
+      "shadows_enabled": false,
+      "shadow_map_size": 0,
+      "post_processing_enabled": false,
+      "max_draw_calls": 50,
+      "max_triangles": 150000,
+      "max_texture_px": 1024,
+      "max_vram_textures_mb": 128,
+      "use_baked_lightmaps": true,
+      "on_demand_rendering": true
+    },
+    "MEDIUM": {
+      "label": "Medium (Balanced 1080p)",
+      "target_fps": 60,
+      "max_frame_time_ms": 16.67,
+      "max_render_height_px": 1080,
+      "max_pixel_ratio": 1.5,
+      "antialias": true,
+      "power_preference": "high-performance",
+      "shadows_enabled": true,
+      "shadow_map_size": 1024,
+      "post_processing_enabled": false,
+      "max_draw_calls": 150,
+      "max_triangles": 450000,
+      "max_texture_px": 2048,
+      "max_vram_textures_mb": 384,
+      "use_baked_lightmaps": true,
+      "on_demand_rendering": false
+    },
+    "HIGH": {
+      "label": "High (Discrete GPU)",
+      "target_fps": 60,
+      "max_frame_time_ms": 16.67,
+      "max_render_height_px": 2160,
+      "max_pixel_ratio": 2.0,
+      "antialias": true,
+      "power_preference": "high-performance",
+      "shadows_enabled": true,
+      "shadow_map_size": 2048,
+      "post_processing_enabled": true,
+      "max_draw_calls": 350,
+      "max_triangles": 1200000,
+      "max_texture_px": 4096,
+      "max_vram_textures_mb": 768,
+      "use_baked_lightmaps": true,
+      "on_demand_rendering": false
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0.0",
+  "story_id": "chronometer_chamber",
+  "title": "The Borrowed Second",
+  "start_node": "node_intro",
+  "initial_variables": {
+    "inspected_chronometer": false,
+    "inspected_manifold": false,
+    "pressure_kpa": 110,
+    "stabilizer_engaged": false,
+    "alarm_active": false
+  },
+  "camera_marks": {
+    "cam_wide": {
+      "position": [0.0, 1.75, 4.4],
+      "target": [0.0, 0.95, 0.0],
+      "fov": 45
+    },
+    "cam_chronometer": {
+      "position": [-0.85, 1.32, 1.35],
+      "target": [-0.95, 0.92, 0.15],
+      "fov": 30
+    },
+    "cam_manifold": {
+      "position": [0.95, 1.45, 1.5],
+      "target": [1.05, 1.05, 0.1],
+      "fov": 34
+    },
+    "cam_core": {
+      "position": [0.0, 1.35, 2.1],
+      "target": [0.0, 1.1, -0.4],
+      "fov": 38
+    }
+  },
+  "nodes": {
+    "node_intro": {
+      "id": "node_intro",
+      "speaker": "CHAMBER TELEMETRY",
+      "text": "Amber dust hangs in the vault beam. On the workbench, a brass chronometer ticks against a rising magnetic hum from the central core.",
+      "camera_mark": "cam_wide",
+      "scene_cue": "state_nominal",
+      "terminal": false,
+      "choices": [
+        {
+          "id": "c_inspect_watch",
+          "label": "Inspect the brass chronometer on the left bench",
+          "target": "node_chronometer",
+          "requires": {},
+          "effects": {
+            "inspected_chronometer": true
+          }
+        },
+        {
+          "id": "c_inspect_valve",
+          "label": "Check the coolant manifold gauge on the right",
+          "target": "node_manifold",
+          "requires": {},
+          "effects": {
+            "inspected_manifold": true
+          }
+        },
+        {
+          "id": "c_approach_core",
+          "label": "Step directly to the central containment console",
+          "target": "node_core_console",
+          "requires": {},
+          "effects": {
+            "pressure_kpa": 135,
+            "alarm_active": true
+          }
+        }
+      ]
+    },
+    "node_chronometer": {
+      "id": "node_chronometer",
+      "speaker": "FORENSIC OBSERVATION",
+      "text": "Through the bevelled sapphire crystal, the sweep hand pauses every fourth beat. Etched into the inner bezel: 'SYNC PHASE AT 90 KPA.'",
+      "camera_mark": "cam_chronometer",
+      "scene_cue": "focus_chronometer",
+      "terminal": false,
+      "choices": [
+        {
+          "id": "c_watch_to_manifold",
+          "label": "Move across to the coolant manifold valve",
+          "target": "node_manifold",
+          "requires": {},
+          "effects": {
+            "inspected_manifold": true
+          }
+        },
+        {
+          "id": "c_watch_to_core",
+          "label": "Turn to the central containment console",
+          "target": "node_core_console",
+          "requires": {},
+          "effects": {}
+        }
+      ]
+    },
+    "node_manifold": {
+      "id": "node_manifold",
+      "speaker": "COOLANT MANIFOLD",
+      "text": "The analog needle sits at 110 kPa. A knurled relief wheel can vent excess line pressure down to 90 kPa before ignition.",
+      "camera_mark": "cam_manifold",
+      "scene_cue": "focus_manifold",
+      "terminal": false,
+      "choices": [
+        {
+          "id": "c_vent_to_90",
+          "label": "Vent the line to 90 kPa and lock the stabilizer",
+          "target": "node_core_console",
+          "requires": {},
+          "effects": {
+            "pressure_kpa": 90,
+            "stabilizer_engaged": true,
+            "alarm_active": false
+          }
+        },
+        {
+          "id": "c_leave_valve",
+          "label": "Leave pressure at 110 kPa and return to the console",
+          "target": "node_core_console",
+          "requires": {},
+          "effects": {}
+        }
+      ]
+    },
+    "node_core_console": {
+      "id": "node_core_console",
+      "speaker": "CONTAINMENT CONSOLE",
+      "text": "The primary ignition switch awaits command. Harmonic coils hum inside the borosilicate housing.",
+      "camera_mark": "cam_core",
+      "scene_cue": "focus_core",
+      "terminal": false,
+      "choices": [
+        {
+          "id": "c_harmonic_sync",
+          "label": "Trigger phase-locked ignition at 90 kPa (Harmonic Sync)",
+          "target": "node_ending_stabilized",
+          "requires": {
+            "inspected_chronometer": true,
+            "stabilizer_engaged": true
+          },
+          "effects": {
+            "alarm_active": false
+          }
+        },
+        {
+          "id": "c_force_ignition",
+          "label": "Force immediate raw ignition override",
+          "target": "node_ending_overload",
+          "requires": {},
+          "effects": {
+            "pressure_kpa": 180,
+            "alarm_active": true
+          }
+        },
+        {
+          "id": "c_step_back",
+          "label": "Step back and re-examine the chamber instruments",
+          "target": "node_intro",
+          "requires": {},
+          "effects": {}
+        }
+      ]
+    },
+    "node_ending_stabilized": {
+      "id": "node_ending_stabilized",
+      "speaker": "CHAMBER TELEMETRY",
+      "text": "The core locks into a silent golden resonance. At 90 kPa, the chronometer resumes a smooth unbroken sweep.",
+      "camera_mark": "cam_wide",
+      "scene_cue": "state_harmonic_lock",
+      "terminal": true,
+      "choices": []
+    },
+    "node_ending_overload": {
+      "id": "node_ending_overload",
+      "speaker": "CHAMBER WARNING",
+      "text": "Unvented line pressure spikes past 180 kPa. Amber strobes flood the walls as emergency dampers seal the vault.",
+      "camera_mark": "cam_wide",
+      "scene_cue": "state_overload_alarm",
+      "terminal": true,
+      "choices": []
+    }
+  }
+}

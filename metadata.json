@@ -1,0 +1,6 @@
+{
+  "name": "UltraSkill v1.0.0",
+  "description": "Portable multi-pillar skill package for 3D Cycles OptiX production, game development, and software engineering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,41 @@
+name: Python CI & UltraSkill Package Audit
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-and-test:
+    name: Validate Package, Scan Secrets & Run Tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan for hardcoded secrets
+        run: python3 UltraSkill/skills/34-security/scripts/secret_scanner.py --path UltraSkill
+
+      - name: Run full 288-file UltraSkill validator
+        run: python3 UltraSkill/tools/validate.py
+
+      - name: Run CLI application unit test suite
+        run: python3 UltraSkill/examples/06-cli-app/test_render_ledger.py
+
+      - name: Package deterministic release archive
+        run: python3 UltraSkill/tools/pack.py --output dist/UltraSkill-1.0.0.zip

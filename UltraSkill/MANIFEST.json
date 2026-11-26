@@ -1,0 +1,1767 @@
+{
+  "package": "UltraSkill",
+  "version": "1.0.0",
+  "total_files": 288,
+  "max_files": 300,
+  "folder_counts": {
+    "root": 8,
+    "skills/00-director": 15,
+    "skills/10-art-direction": 8,
+    "skills/11-modeling": 10,
+    "skills/12-materials-lighting": 12,
+    "skills/13-rigging-animation": 10,
+    "skills/14-blender-pipeline": 16,
+    "skills/15-film-trailer": 12,
+    "skills/16-vfx": 12,
+    "skills/17-realtime-web-scenes": 14,
+    "skills/18-interactive-story": 11,
+    "skills/20-game-design": 11,
+    "skills/21-engine-architecture": 9,
+    "skills/22-gameplay-systems": 13,
+    "skills/23-ai-physics": 7,
+    "skills/24-networking-backend": 7,
+    "skills/25-ui-audio": 7,
+    "skills/26-optimization": 9,
+    "skills/27-production-qa-release": 11,
+    "skills/30-architecture": 9,
+    "skills/31-languages": 10,
+    "skills/32-web-backend-data": 9,
+    "skills/33-testing-debugging": 9,
+    "skills/34-security": 7,
+    "skills/35-devops-ci": 10,
+    "skills/36-code-review": 6,
+    "examples": 18,
+    "tools": 2,
+    "evals": 6
+  },
+  "files": [
+    {
+      "path": "MANIFEST.json",
+      "folder": "root",
+      "batch": 0,
+      "purpose": "Canonical 288-file inventory with path, folder, batch assignment, and purpose for validation."
+    },
+    {
+      "path": "SKILL.md",
+      "folder": "root",
+      "batch": 1,
+      "purpose": "Top-level UltraSkill router that dispatches tasks to the smallest required skill set."
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "folder": "root",
+      "batch": 1,
+      "purpose": "System design, constraint enforcement (4 GB laptop + Colab OptiX + GitHub Actions), and folder layout."
+    },
+    {
+      "path": "BRAIN.md",
+      "folder": "root",
+      "batch": 1,
+      "purpose": "Decision rules, veteran heuristics, quality bars, and cross-pillar mental models."
+    },
+    {
+      "path": "README.md",
+      "folder": "root",
+      "batch": 1,
+      "purpose": "Quickstart guide, hardware separation model, and portable usage across AI coding agents."
+    },
+    {
+      "path": "CREDITS.md",
+      "folder": "root",
+      "batch": 1,
+      "purpose": "Open-source tool attributions, license records, and structural inspiration acknowledgment."
+    },
+    {
+      "path": "CHANGELOG.md",
+      "folder": "root",
+      "batch": 1,
+      "purpose": "Release history and versioned milestone log for UltraSkill v1.0.0."
+    },
+    {
+      "path": "install.py",
+      "folder": "root",
+      "batch": 1,
+      "purpose": "CLI installer that copies UltraSkill into a target workspace and prints loading instructions for Antigravity IDE, Google AI Studio, Claude, and ChatGPT."
+    },
+    {
+      "path": "skills/00-director/SKILL.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Studio director skill controlling intake, measurable bars, 5-round loop, single-weakest-item fix rule, and budget caps."
+    },
+    {
+      "path": "skills/00-director/references/intake.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Scope extraction, constraint check, and ambiguity resolution before production starts."
+    },
+    {
+      "path": "skills/00-director/references/rounds.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Round execution protocol: smallest testable slice, real output capture, single weakest defect fix, 5-round hard stop."
+    },
+    {
+      "path": "skills/00-director/references/quality-gates.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Quantitative and visual acceptance gates across 3D renders, game builds, and software deliverables."
+    },
+    {
+      "path": "skills/00-director/references/usage-budget.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Context token, GPU hour, and file regeneration rules to prevent wasted cycles."
+    },
+    {
+      "path": "skills/00-director/references/handoffs.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Contracts between skills (e.g., 11-modeling to 12-materials-lighting to 14-blender-pipeline)."
+    },
+    {
+      "path": "skills/00-director/references/shipping.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Final release verification, honesty audit, and artifact packaging checklist."
+    },
+    {
+      "path": "skills/00-director/templates/BRIEF.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Project brief template capturing target medium, hardware limits, deliverables, and non-goals."
+    },
+    {
+      "path": "skills/00-director/templates/BARS.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Measurable quality bars template with pass thresholds and verification commands."
+    },
+    {
+      "path": "skills/00-director/templates/ROUNDS.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Round ledger template tracking round number, artifact inspected, scores, weakest defect, and single fix applied."
+    },
+    {
+      "path": "skills/00-director/templates/DECISIONS.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Architecture and creative decision log recording context, options weighed, choice, and trade-offs."
+    },
+    {
+      "path": "skills/00-director/templates/QUALITY.md",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Side-by-side comparison scorecard and fake-3D / defect audit sign-off template."
+    },
+    {
+      "path": "skills/00-director/scripts/init_project.py",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Scaffolds a new project tracking directory populated with BRIEF, BARS, ROUNDS, DECISIONS, and QUALITY templates."
+    },
+    {
+      "path": "skills/00-director/scripts/log_round.py",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Appends a validated round entry to ROUNDS.md and enforces the 5-round cap alert."
+    },
+    {
+      "path": "skills/00-director/scripts/check_gates.py",
+      "folder": "skills/00-director",
+      "batch": 1,
+      "purpose": "Parses BARS.md and QUALITY.md to verify all required quality gates are scored and passing before shipping."
+    },
+    {
+      "path": "tools/validate.py",
+      "folder": "tools",
+      "batch": 1,
+      "purpose": "Audits UltraSkill: file count <= 300, exact manifest match, SKILL.md frontmatter and line count, relative links, no placeholders, Python AST syntax, and JSON validity."
+    },
+    {
+      "path": "skills/14-blender-pipeline/SKILL.md",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 2,
+      "purpose": "Cycles OptiX Colab GPU rendering pipeline skill with mandatory hardware proof, presets, benchmarks, and Drive resume."
+    },
+    {
+      "path": "skills/14-blender-pipeline/scripts/optix_verify.py",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 2,
+      "purpose": "Headless Blender Python script that configures OptiX GPU, prints device/driver telemetry, fails loudly on CPU fallback, renders a 1-frame proof, and runs nvidia-smi."
+    },
+    {
+      "path": "skills/14-blender-pipeline/scripts/apply_preset.py",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 2,
+      "purpose": "Applies PREVIEW, REVIEW, or FINAL Cycles OptiX render settings, AgX color management, and output format rules."
+    },
+    {
+      "path": "skills/14-blender-pipeline/scripts/benchmark_scene.py",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 2,
+      "purpose": "Renders 3 representative frames (start, middle, peak complexity), records frame times and peak VRAM, and blocks sequences > 3 hours without explicit user approval."
+    },
+    {
+      "path": "skills/14-blender-pipeline/scripts/render_sequence.py",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 2,
+      "purpose": "Crash-safe frame loop that writes EXR/16-bit PNG directly to Google Drive, updates a JSON manifest per frame, and skips verified frames on resume."
+    },
+    {
+      "path": "skills/14-blender-pipeline/scripts/verify_frames.py",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 2,
+      "purpose": "Scans rendered output directory against the frame manifest to detect missing, zero-byte, truncated, or corrupt frames."
+    },
+    {
+      "path": "skills/14-blender-pipeline/scripts/vram_audit.py",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 2,
+      "purpose": "Inspects a .blend file for polygon counts, un-instanced duplicates, subdivision levels, and 4K/8K textures that threaten Tesla T4 15 GB VRAM."
+    },
+    {
+      "path": "skills/14-blender-pipeline/templates/colab_optix_runner.py",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 2,
+      "purpose": "Self-contained Google Colab cell script to mount Drive, install portable Blender CLI, prove OptiX on T4, run benchmark, and execute resumable renders."
+    },
+    {
+      "path": "skills/14-blender-pipeline/references/optix-setup-and-proof.md",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 3,
+      "purpose": "Exact Cycles OptiX device initialization sequence, headless execution without X11, and error handling when OptiX fails."
+    },
+    {
+      "path": "skills/14-blender-pipeline/references/quality-presets.md",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 3,
+      "purpose": "Starting values for PREVIEW (960x540), REVIEW (1920x1080), and FINAL (1080p/4K) presets including samples, noise thresholds, light paths, and motion blur."
+    },
+    {
+      "path": "skills/14-blender-pipeline/references/denoising-and-flicker.md",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 3,
+      "purpose": "OptiX vs OpenImageDenoise comparison, albedo/normal passes, high-sample crop verification, and temporal flicker mitigation."
+    },
+    {
+      "path": "skills/14-blender-pipeline/references/colab-resilience.md",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 3,
+      "purpose": "Designing for unpredictable Colab disconnects: per-frame Drive sync, atomic manifest updates, and resume verification."
+    },
+    {
+      "path": "skills/14-blender-pipeline/references/t4-vram-budgeting.md",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 3,
+      "purpose": "Fitting complex scenes inside 15 GB T4 VRAM using linked collections, instancing, texture mip/size caps, and adaptive subdivision."
+    },
+    {
+      "path": "skills/14-blender-pipeline/references/exr-and-color-pipeline.md",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 3,
+      "purpose": "Multi-layer OpenEXR DWAA/ZIP configuration, AgX view transform preservation, and 16-bit PNG intermediate trade-offs."
+    },
+    {
+      "path": "skills/14-blender-pipeline/references/eevee-headless-preview.md",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 3,
+      "purpose": "When and how to use xvfb-run or EGL for fast EEVEE playblasts without confusing preview output with Cycles finals."
+    },
+    {
+      "path": "skills/14-blender-pipeline/templates/render_manifest.json",
+      "folder": "skills/14-blender-pipeline",
+      "batch": 3,
+      "purpose": "JSON schema and starter template for tracking scene hash, preset, benchmark approval, and per-frame completion status."
+    },
+    {
+      "path": "skills/10-art-direction/SKILL.md",
+      "folder": "skills/10-art-direction",
+      "batch": 4,
+      "purpose": "Art direction skill governing real-photo reference gathering, physical lenses, composition, value structure, and fake-3D elimination."
+    },
+    {
+      "path": "skills/10-art-direction/references/reference-gathering.md",
+      "folder": "skills/10-art-direction",
+      "batch": 4,
+      "purpose": "How to build a photographic reference board for lighting, lens behavior, surface wear, and scale cues."
+    },
+    {
+      "path": "skills/10-art-direction/references/lens-and-camera.md",
+      "folder": "skills/10-art-direction",
+      "batch": 4,
+      "purpose": "Sensor sizes, focal lengths (24mm to 135mm), f-stops, depth of field, shutter angles, and physical camera height."
+    },
+    {
+      "path": "skills/10-art-direction/references/composition-and-values.md",
+      "folder": "skills/10-art-direction",
+      "batch": 4,
+      "purpose": "Foreground/midground/background separation, luminance ratios, leading lines, and grayscale value checks."
+    },
+    {
+      "path": "skills/10-art-direction/references/fake-3d-tells.md",
+      "folder": "skills/10-art-direction",
+      "batch": 4,
+      "purpose": "Diagnostic guide to 25 common CGI giveaways: razor edges, uniform roughness, floating contact, clipped highlights, and perfect symmetry."
+    },
+    {
+      "path": "skills/10-art-direction/references/hardest-subjects.md",
+      "folder": "skills/10-art-direction",
+      "batch": 4,
+      "purpose": "Why digital humans, hair, cloth, water, and fire fail uncanny checks, and framing/distance strategies when budget is limited."
+    },
+    {
+      "path": "skills/10-art-direction/templates/SHOT_LIST.md",
+      "folder": "skills/10-art-direction",
+      "batch": 4,
+      "purpose": "Shot list template specifying focal length, f-stop, camera height, key-to-fill ratio, and primary subject per shot."
+    },
+    {
+      "path": "skills/10-art-direction/templates/FAKE_3D_CHECKLIST.md",
+      "folder": "skills/10-art-direction",
+      "batch": 4,
+      "purpose": "Mandatory frame audit checklist run on every rendered still before look approval."
+    },
+    {
+      "path": "skills/11-modeling/SKILL.md",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "3D modeling skill covering real-world metric scale, bevel standards, hard-surface, organic forms, UVs, LODs, and procedural scatter."
+    },
+    {
+      "path": "skills/11-modeling/references/scale-and-bevels.md",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "Metric unit enforcement, applied transforms, and realistic bevel widths (0.5 mm to 5 mm) for specular catchlights."
+    },
+    {
+      "path": "skills/11-modeling/references/hard-surface-topology.md",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "Subdivision support loops, boolean cleanup, weighted normals, and panel gap tolerances."
+    },
+    {
+      "path": "skills/11-modeling/references/organic-and-foliage.md",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "Rock fractures, terrain erosion, bark displacement, and translucent leaf geometry."
+    },
+    {
+      "path": "skills/11-modeling/references/character-forms.md",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "Anatomical proportions, bony landmarks, pore-level displacement boundaries, and garment thickness."
+    },
+    {
+      "path": "skills/11-modeling/references/retopology-and-deformation.md",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "Quad flow around joints, face loops, pole placement, and polygon density budgets."
+    },
+    {
+      "path": "skills/11-modeling/references/uv-and-texel-density.md",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "Seam hiding, UDIM tiling for offline hero assets vs single-atlas packing for realtime targets."
+    },
+    {
+      "path": "skills/11-modeling/references/lods-and-instancing.md",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "Decimation ratios, collection instancing for T4 VRAM conservation, and screen-size LOD thresholds."
+    },
+    {
+      "path": "skills/11-modeling/references/procedural-geometry-nodes.md",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "Point distribution, Poisson disk spacing, normal alignment, and scale/rotation jitter to break repetition."
+    },
+    {
+      "path": "skills/11-modeling/scripts/mesh_linter.py",
+      "folder": "skills/11-modeling",
+      "batch": 5,
+      "purpose": "Headless Blender Python script that flags unapplied scale, non-manifold edges, zero-bevel sharp corners, flipped normals, and missing UVs."
+    },
+    {
+      "path": "skills/12-materials-lighting/SKILL.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "PBR shading, surface imperfection layering, physical lighting rigs, volumetric atmosphere, and AgX color management."
+    },
+    {
+      "path": "skills/12-materials-lighting/references/pbr-energy-conservation.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "Principled BSDF v2 rules: plausible albedo ranges (0.04 to 0.80), binary metallic maps, and dielectric IOR values."
+    },
+    {
+      "path": "skills/12-materials-lighting/references/roughness-and-imperfections.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "Breaking uniform reflections with micro-scratches, fingerprints, dust accumulation in cavities, and edge wear."
+    },
+    {
+      "path": "skills/12-materials-lighting/references/subsurface-scattering.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "Random Walk SSS setup, scale in meters, and radius vectors for human skin, wax, marble, milk, and foliage."
+    },
+    {
+      "path": "skills/12-materials-lighting/references/glass-water-and-caustics.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "Transmission roughness, liquid meniscus geometry, shadow caustics, and architectural glass tricks."
+    },
+    {
+      "path": "skills/12-materials-lighting/references/physical-lighting-rigs.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "Motivated light sources, inverse-square falloff, Blackbody Kelvin temperatures, area light softness, and banning flat ambient fill."
+    },
+    {
+      "path": "skills/12-materials-lighting/references/hdri-and-sun-sky.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "High-dynamic-range environment alignment, Nishita sky tuning, portal lights for interiors, and shadow sharpness validation."
+    },
+    {
+      "path": "skills/12-materials-lighting/references/atmosphere-and-volumetrics.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "Principled Volume density, anisotropy (0.3 to 0.7), height falloff, and bounding volume boxes to protect render times."
+    },
+    {
+      "path": "skills/12-materials-lighting/references/agx-and-color-pipeline.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "AgX view transform, Punchy vs Base looks, False Color exposure checks, and linear texture color space rules."
+    },
+    {
+      "path": "skills/12-materials-lighting/references/film-finish-compositing.md",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "Restrained glare/bloom, chromatic aberration limits, optical vignette, and 35mm sensor grain applied in post."
+    },
+    {
+      "path": "skills/12-materials-lighting/scripts/setup_studio_lighting.py",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "Blender Python script that builds a calibrated 3-point physical area light rig, physical camera, and AgX color setup."
+    },
+    {
+      "path": "skills/12-materials-lighting/scripts/audit_materials.py",
+      "folder": "skills/12-materials-lighting",
+      "batch": 6,
+      "purpose": "Blender Python script that checks all materials for illegal albedo > 0.85, constant roughness, and non-Color normal maps."
+    },
+    {
+      "path": "skills/13-rigging-animation/SKILL.md",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "Skeletal rigging, weight painting, mocap retargeting and foot-lock cleanup, physical camera motion, and secondary dynamics."
+    },
+    {
+      "path": "skills/13-rigging-animation/references/skeleton-and-controls.md",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "Joint orientation conventions, IK/FK switching, twist bones, and mechanical pivot constraints."
+    },
+    {
+      "path": "skills/13-rigging-animation/references/skinning-and-correctives.md",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "Weight normalization, 4-bone influence limits for engines, dual-quaternion skinning, and corrective shape keys."
+    },
+    {
+      "path": "skills/13-rigging-animation/references/animation-principles-for-realism.md",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "Center-of-mass shifts, momentum conservation, micro-settles, and avoiding spline-float."
+    },
+    {
+      "path": "skills/13-rigging-animation/references/mocap-cleanup.md",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "Foot sliding elimination, knee pop filtering, contact floor planes, and additive layer adjustments."
+    },
+    {
+      "path": "skills/13-rigging-animation/references/physical-camera-animation.md",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "Simulating dolly mass, crane inertia, tripod pan drag, handheld breathing noise, and rack focus pull speeds."
+    },
+    {
+      "path": "skills/13-rigging-animation/references/facial-and-eyes.md",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "FACS action units, saccadic eye darts, eyelid-cornea displacement, and avoiding dead-stare artifacts."
+    },
+    {
+      "path": "skills/13-rigging-animation/references/secondary-motion.md",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "Damped spring constraints, cloth collision margins, and baking simulations to disk before Colab upload."
+    },
+    {
+      "path": "skills/13-rigging-animation/scripts/camera_rig_builder.py",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "Blender Python script that builds a physical camera crane/dolly rig with target focus empty and subtle handheld noise modifiers."
+    },
+    {
+      "path": "skills/13-rigging-animation/scripts/bake_animation.py",
+      "folder": "skills/13-rigging-animation",
+      "batch": 7,
+      "purpose": "Headless Blender script that bakes constraints and procedural motion to explicit keyframes for deterministic rendering and glTF export."
+    },
+    {
+      "path": "skills/15-film-trailer/SKILL.md",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Cinematic trailer pacing, beat sheets, previz storyboards, editorial cutting, sound design sync, and FFmpeg mastering."
+    },
+    {
+      "path": "skills/15-film-trailer/references/trailer-structure.md",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Three-act 60-second trailer structure: cold hook (0-12s), world escalation (12-38s), rhythmic climax (38-52s), stinger (52-60s)."
+    },
+    {
+      "path": "skills/15-film-trailer/references/storyboard-and-animatic.md",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Locking frame counts, screen direction continuity, and 180-degree rule using LOW/PREVIEW renders before FINAL lighting."
+    },
+    {
+      "path": "skills/15-film-trailer/references/editorial-pacing.md",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Cut on action, eye-trace matching across cuts, J/L audio overlaps, and hold lengths for visual comprehension."
+    },
+    {
+      "path": "skills/15-film-trailer/references/sound-design-and-stems.md",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Sub-drops, risers, hard hits, room tone beds, dialogue ducking, and -14 LUFS loudness normalization."
+    },
+    {
+      "path": "skills/15-film-trailer/references/title-cards-and-typography.md",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "High-contrast title framing, kerning, hold readability, and safe margins."
+    },
+    {
+      "path": "skills/15-film-trailer/references/color-continuity.md",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Matching black levels, white balance, and skin tone vectors across sequential shots."
+    },
+    {
+      "path": "skills/15-film-trailer/references/ffmpeg-encoding-pipeline.md",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": " assembling EXR/16-bit PNG image sequences into ProRes 422 HQ masters and high-bitrate H.264/H.265 web deliverables."
+    },
+    {
+      "path": "skills/15-film-trailer/templates/TRAILER_BEAT_SHEET.md",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Frame-exact beat sheet mapping timecode, shot ID, duration in frames, audio hit, and render preset status."
+    },
+    {
+      "path": "skills/15-film-trailer/scripts/assemble_sequence.py",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Wrapper around FFmpeg that validates frame sequence continuity, muxes audio, burns optional timecode for REVIEW, and encodes FINAL MP4."
+    },
+    {
+      "path": "skills/15-film-trailer/scripts/contact_sheet.py",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Generates a single multi-shot contact sheet image from rendered key frames using FFmpeg tile filters to check shot-to-shot color continuity."
+    },
+    {
+      "path": "skills/15-film-trailer/scripts/loudness_check.py",
+      "folder": "skills/15-film-trailer",
+      "batch": 8,
+      "purpose": "Runs FFmpeg ebur128 filter on trailer audio/video to verify integrated loudness (-14 LUFS) and true peak (<= -1.0 dBTP)."
+    },
+    {
+      "path": "skills/16-vfx/SKILL.md",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Visual effects skill covering particle systems, Mantaflow smoke/fire/fluids, rigid-body destruction, procedural holograms, and multi-pass compositing."
+    },
+    {
+      "path": "skills/16-vfx/references/particles-and-debris.md",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Sparks, dust motes, rain, air drag, motion-blurred streak lengths, and instanced debris chunks."
+    },
+    {
+      "path": "skills/16-vfx/references/smoke-and-fire.md",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Voxel resolution budgeting, vorticity, temperature-driven Blackbody emission, and avoiding mushroom-cap CG fire."
+    },
+    {
+      "path": "skills/16-vfx/references/fluids-and-splashes.md",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "FLIP solver substeps, surface tension, foam/spray secondary particles, and mesh smoothing."
+    },
+    {
+      "path": "skills/16-vfx/references/destruction-and-rigid-bodies.md",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Voronoi cell fracture clustering, activation constraints, internal face materials, and micro-debris emission on impact."
+    },
+    {
+      "path": "skills/16-vfx/references/holograms-and-energy.md",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Fresnel falloff, volumetric emission casting real light onto nearby surfaces, scanline parallax, and chromatic dispersion."
+    },
+    {
+      "path": "skills/16-vfx/references/render-passes-and-aovs.md",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Splitting diffuse, glossy, transmission, volume,emission, cryptomatte, mist, and vector passes into multi-layer EXR."
+    },
+    {
+      "path": "skills/16-vfx/references/deep-compositing-and-integration.md",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Light wrap, black-level matching, defocus blur matching, and grain re-application over VFX elements."
+    },
+    {
+      "path": "skills/16-vfx/references/simulation-cache-management.md",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "OpenVDB and Alembic cache compression, disk footprint calculation, and baking headless on Colab before rendering."
+    },
+    {
+      "path": "skills/16-vfx/scripts/setup_vfx_passes.py",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Blender Python script that enables Cryptomatte, Z/Mist, Normal, Vector, and light group AOVs for multi-layer EXR compositing."
+    },
+    {
+      "path": "skills/16-vfx/scripts/build_compositor_tree.py",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Blender Python script that constructs a standardized physical glare, lens distortion, exposure, and film grain compositor node graph."
+    },
+    {
+      "path": "skills/16-vfx/scripts/sim_budget_estimator.py",
+      "folder": "skills/16-vfx",
+      "batch": 9,
+      "purpose": "Calculates estimated OpenVDB voxel count, RAM usage, and disk size from domain bounds and resolution divisions before baking."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/SKILL.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 10,
+      "purpose": "Three.js and WebGL realtime 3D skill with explicit LOW (Intel UHD 4 GB laptop) and HIGH presets, Cycles lightmap baking, and glTF optimization."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/references/offline-vs-realtime-gap.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 10,
+      "purpose": "Honest accounting of what realtime WebGL loses compared to Cycles OptiX and how baked lightmaps/probes bridge static scenes."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/references/hardware-presets-low-to-high.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 10,
+      "purpose": "Exact budgets for LOW (Intel UHD 1 GB, pixelRatio 1.0, no shadows/post, <= 50 draw calls) vs MEDIUM and HIGH."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/references/cycles-to-gltf-baking.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 10,
+      "purpose": "Baking Cycles GI and AO onto UV2 lightmaps, exporting Draco/Meshopt + KTX2 glTF, and reconstructing in Three.js."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/references/threejs-scene-architecture.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 10,
+      "purpose": "Renderer lifecycle, resource disposal (`geometry.dispose()`, `material.dispose()`, `texture.dispose()`), and context loss recovery."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/references/instancing-and-draw-calls.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 10,
+      "purpose": "InstancedMesh, BatchedMesh, merged static geometry, and frustum culling strategies."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/references/lighting-and-pmrem.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 10,
+      "purpose": "PMREMGenerator HDRI environment maps, ACESFilmic/AgX tone mapping in Three.js, and single shadow-casting light limits."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/references/custom-shaders-and-materials.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 11,
+      "purpose": " extending MeshStandardMaterial via onBeforeCompile, uniform animation without CPU spikes, and precision qualifiers."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/references/camera-controls-and-raycasting.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 11,
+      "purpose": "Damped cameras, collision bounds, BVH or layer-filtered raycasting, and throttling pointer move checks."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/references/loading-and-memory-limits.md",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 11,
+      "purpose": "Keeping GPU texture memory under 256 MB for 1 GB shared-VRAM laptops, progressive asset loading, and fallback geometries."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/templates/quality_presets.json",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 11,
+      "purpose": "JSON configuration defining LOW, MEDIUM, and HIGH runtime flags for Three.js applications."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/templates/scene_bootstrap.js",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 11,
+      "purpose": "Production Three.js bootstrap module with automatic LOW preset detection for integrated GPUs, resize handling, and disposal."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/scripts/bake_lightmap_blender.py",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 11,
+      "purpose": "Headless Blender Cycles script that generates a secondary lightmap UV, bakes combined diffuse/AO lighting, and exports glTF."
+    },
+    {
+      "path": "skills/17-realtime-web-scenes/scripts/gltf_budget_check.py",
+      "folder": "skills/17-realtime-web-scenes",
+      "batch": 11,
+      "purpose": "Parses a .gltf/.glb file using standard library struct/json to audit node count, mesh primitives, vertex totals, and texture byte sizes."
+    },
+    {
+      "path": "skills/18-interactive-story/SKILL.md",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Interactive 3D narrative skill combining playable cameras, branching dialogue graphs, spatial triggers, and deterministic save states."
+    },
+    {
+      "path": "skills/18-interactive-story/references/story-graph-architecture.md",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Directed acyclic graphs with state variables, precondition guards, consequences, and dead-end validation."
+    },
+    {
+      "path": "skills/18-interactive-story/references/spatial-triggers-and-hotspots.md",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Proximity volumes, line-of-sight checks, inspectable 3D props, and accessible keyboard/gamepad interaction prompts."
+    },
+    {
+      "path": "skills/18-interactive-story/references/camera-choreography.md",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Seamless blending between free exploration and authored dialogue framing without jarring cuts."
+    },
+    {
+      "path": "skills/18-interactive-story/references/state-persistence-and-rewind.md",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Versioned JSON save snapshots, choice history ledgers, and checkpoint rewind for testing branches."
+    },
+    {
+      "path": "skills/18-interactive-story/references/pacing-and-environmental-storytelling.md",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Using lighting shifts, prop state changes, and audio cues instead of walls of exposition text."
+    },
+    {
+      "path": "skills/18-interactive-story/references/hybrid-prerendered-backdrops.md",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Combining Cycles OptiX camera-projected stills or video loops with realtime 3D hotspots for photoreal scenes on 4 GB laptops."
+    },
+    {
+      "path": "skills/18-interactive-story/templates/story_graph.json",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Schema-validated branching dialogue and scene trigger graph template."
+    },
+    {
+      "path": "skills/18-interactive-story/templates/story_runtime.js",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Zero-dependency JavaScript state machine that executes story_graph.json, evaluates conditions, and persists save state."
+    },
+    {
+      "path": "skills/18-interactive-story/scripts/validate_story_graph.py",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Verifies story_graph.json for unreachable nodes, broken target IDs, missing flag definitions, and infinite loops."
+    },
+    {
+      "path": "skills/18-interactive-story/scripts/export_twine_to_json.py",
+      "folder": "skills/18-interactive-story",
+      "batch": 12,
+      "purpose": "Converts plain Markdown/Twee passage files into UltraSkill story_graph.json format."
+    },
+    {
+      "path": "skills/20-game-design/SKILL.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "A-to-AAA game design skill covering 30-second core loops, living GDDs, spatial metrics, economy sinks/faucets, and Monte Carlo balance verification."
+    },
+    {
+      "path": "skills/20-game-design/references/core-loop-and-pillars.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "Second-to-second, minute-to-minute, and hour-to-hour loops, design pillars as razor filters, and playable greybox proofs."
+    },
+    {
+      "path": "skills/20-game-design/references/game-design-document.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "Keeping GDDs under 15 pages of actionable tables, state diagrams, and metric contracts instead of unread prose."
+    },
+    {
+      "path": "skills/20-game-design/references/level-design-and-metrics.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "Jump distance, cover height, corridor width, sightlines, valence/weenies, and combat arena pacing."
+    },
+    {
+      "path": "skills/20-game-design/references/economy-and-progression.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "Faucets, sinks, XP curves, diminishing returns, and preventing runaway inflation."
+    },
+    {
+      "path": "skills/20-game-design/references/combat-and-encounter-balance.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "Time-to-kill (TTK), action economy budgets, telegraph frames, recovery windows, and enemy role synergies."
+    },
+    {
+      "path": "skills/20-game-design/references/narrative-and-worldbuilding.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "Barks, environmental lore, ludonarrative alignment, and pacing story beats around gameplay intensity."
+    },
+    {
+      "path": "skills/20-game-design/references/onboarding-and-difficulty.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "Invisible tutorials: safe teach, gated test, mastery twist, plus assist options and dynamic pacing."
+    },
+    {
+      "path": "skills/20-game-design/templates/GDD_ONE_PAGER.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "One-page game design contract with pillars, loop timing, control map, metric rules, and scope ceiling."
+    },
+    {
+      "path": "skills/20-game-design/templates/LEVEL_METRICS.md",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "Standardized character movement and geometry metric sheet shared between level designers, modelers, and programmers."
+    },
+    {
+      "path": "skills/20-game-design/scripts/balance_simulator.py",
+      "folder": "skills/20-game-design",
+      "batch": 13,
+      "purpose": "Runs deterministic Monte Carlo combat and economy simulations from JSON stat tables to verify TTK and resource curves."
+    },
+    {
+      "path": "skills/21-engine-architecture/SKILL.md",
+      "folder": "skills/21-engine-architecture",
+      "batch": 14,
+      "purpose": "Game engine architecture skill for Godot (default FOSS), custom web/native loops, ECS vs scene trees, memory pools, and save serialization."
+    },
+    {
+      "path": "skills/21-engine-architecture/references/engine-selection-and-hardware.md",
+      "folder": "skills/21-engine-architecture",
+      "batch": 14,
+      "purpose": "Why Godot 4 (Compatibility renderer) or Three.js fits the 4 GB laptop constraint, plus exact RAM/GPU demands if Unity or Unreal 5 is chosen."
+    },
+    {
+      "path": "skills/21-engine-architecture/references/game-loop-and-time.md",
+      "folder": "skills/21-engine-architecture",
+      "batch": 14,
+      "purpose": "Fixed timestep physics accumulator, variable render interpolation, hitstop time scaling, and pause isolation."
+    },
+    {
+      "path": "skills/21-engine-architecture/references/ecs-vs-scene-hierarchy.md",
+      "folder": "skills/21-engine-architecture",
+      "batch": 14,
+      "purpose": "Composition over deep inheritance, Godot Node/Resource separation, data-oriented arrays, and decoupling logic from view."
+    },
+    {
+      "path": "skills/21-engine-architecture/references/asset-pipeline-and-streaming.md",
+      "folder": "skills/21-engine-architecture",
+      "batch": 14,
+      "purpose": "Asynchronous background loading, reference counting, dependency graphs, and eliminating mid-gameplay hitching."
+    },
+    {
+      "path": "skills/21-engine-architecture/references/memory-management-and-pooling.md",
+      "folder": "skills/21-engine-architecture",
+      "batch": 14,
+      "purpose": "Pre-allocated object pools for projectiles/VFX, zero-allocation hot loops, and staying within strict RAM budgets."
+    },
+    {
+      "path": "skills/21-engine-architecture/references/event-bus-and-decoupling.md",
+      "folder": "skills/21-engine-architecture",
+      "batch": 14,
+      "purpose": "Typed signal contracts, command queues, and avoiding brittle singleton webs."
+    },
+    {
+      "path": "skills/21-engine-architecture/references/serialization-and-save-migrations.md",
+      "folder": "skills/21-engine-architecture",
+      "batch": 14,
+      "purpose": "Schema-versioned save files, atomic write-and-rename to prevent corruption, and avoiding unsafe arbitrary code execution (e.g., Godot Resource .tres injection)."
+    },
+    {
+      "path": "skills/21-engine-architecture/scripts/save_schema_validator.py",
+      "folder": "skills/21-engine-architecture",
+      "batch": 14,
+      "purpose": "Validates game save JSON files against version schemas and tests forward migration functions."
+    },
+    {
+      "path": "skills/22-gameplay-systems/SKILL.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 15,
+      "purpose": "Core gameplay programming skill: responsive character controllers, cameras, hitboxes, state machines, inventory, quests, and input buffering."
+    },
+    {
+      "path": "skills/22-gameplay-systems/references/character-controller-physics.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 15,
+      "purpose": "Acceleration curves, coyote time (80-120 ms), jump buffering (100-150 ms), variable jump apex gravity, and stair stepping."
+    },
+    {
+      "path": "skills/22-gameplay-systems/references/game-camera-systems.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 15,
+      "purpose": "Look-ahead framing, spring-arm whisker collision, soft lock-on zones, and trauma-based procedural screen shake."
+    },
+    {
+      "path": "skills/22-gameplay-systems/references/combat-hitboxes-and-game-feel.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 15,
+      "purpose": "Separated hurtbox/hitbox layers, startup/active/recovery frames, 40-90 ms hitstop, knockback vectors, and i-frames."
+    },
+    {
+      "path": "skills/22-gameplay-systems/references/hierarchical-state-machines.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 15,
+      "purpose": "Clean state transition tables, interrupt priorities, and avoiding boolean flag spaghetti."
+    },
+    {
+      "path": "skills/22-gameplay-systems/references/input-abstraction-and-buffering.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 15,
+      "purpose": "Action mapping across keyboard/mouse and gamepads, deadzone radial calculation, and ring-buffer input queues."
+    },
+    {
+      "path": "skills/22-gameplay-systems/references/inventory-and-items.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 15,
+      "purpose": "Immutable item definitions vs mutable instance stacks, equipment modifiers, and transaction safety."
+    },
+    {
+      "path": "skills/22-gameplay-systems/references/quest-and-objective-systems.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 16,
+      "purpose": "Event-driven objective listeners, retroactive completion handling, and journal state persistence."
+    },
+    {
+      "path": "skills/22-gameplay-systems/references/dialogue-and-interaction.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 16,
+      "purpose": "Interaction priority scoring (angle + distance), bark cooldowns, and cutscene lockouts."
+    },
+    {
+      "path": "skills/22-gameplay-systems/references/spawning-and-checkpoints.md",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 16,
+      "purpose": "Wave budgets, off-screen spawn validation, and clean world-state reset on player death."
+    },
+    {
+      "path": "skills/22-gameplay-systems/templates/character_controller.gd",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 16,
+      "purpose": "Production Godot 4 CharacterBody3D/2D controller template implementing coyote time, jump buffering, and acceleration."
+    },
+    {
+      "path": "skills/22-gameplay-systems/templates/state_machine.gd",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 16,
+      "purpose": "Modular Godot 4 finite state machine node template with explicit enter, exit, physics_update, and transition guards."
+    },
+    {
+      "path": "skills/22-gameplay-systems/scripts/verify_stat_tables.py",
+      "folder": "skills/22-gameplay-systems",
+      "batch": 16,
+      "purpose": "Checks item, weapon, and quest JSON definitions for missing IDs, negative cooldowns, and broken reward references."
+    },
+    {
+      "path": "skills/23-ai-physics/SKILL.md",
+      "folder": "skills/23-ai-physics",
+      "batch": 17,
+      "purpose": "Game AI and physics skill covering behavior trees, ticketed group combat, navmesh pathfinding, collision layers, and raycast vehicles."
+    },
+    {
+      "path": "skills/23-ai-physics/references/behavior-trees-and-utility-ai.md",
+      "folder": "skills/23-ai-physics",
+      "batch": 17,
+      "purpose": "Selector/sequence/decorator nodes, blackboard memory, attack token managers so enemies do not swarm simultaneously, and reaction delays."
+    },
+    {
+      "path": "skills/23-ai-physics/references/navigation-and-steering.md",
+      "folder": "skills/23-ai-physics",
+      "batch": 17,
+      "purpose": "A* and NavMesh agent radii, RVO local avoidance, time-sliced path recalculation, and unstuck fallbacks."
+    },
+    {
+      "path": "skills/23-ai-physics/references/collision-layers-and-queries.md",
+      "folder": "skills/23-ai-physics",
+      "batch": 17,
+      "purpose": "Bitmask collision matrices, continuous collision detection (CCD) for fast projectiles, and spatial hashing."
+    },
+    {
+      "path": "skills/23-ai-physics/references/ragdolls-and-vehicles.md",
+      "folder": "skills/23-ai-physics",
+      "batch": 17,
+      "purpose": "Raycast suspension vehicles, joint angle limits, and sleeping active ragdolls after 2 seconds to save CPU."
+    },
+    {
+      "path": "skills/23-ai-physics/templates/behavior_tree_core.py",
+      "folder": "skills/23-ai-physics",
+      "batch": 17,
+      "purpose": "Portable Python reference implementation of a Behavior Tree and Attack Token Director with built-in self-tests."
+    },
+    {
+      "path": "skills/23-ai-physics/scripts/collision_matrix_gen.py",
+      "folder": "skills/23-ai-physics",
+      "batch": 17,
+      "purpose": "Generates consistent bitmask constants and Godot project layer config from a human-readable collision YAML/JSON matrix."
+    },
+    {
+      "path": "skills/24-networking-backend/SKILL.md",
+      "folder": "skills/24-networking-backend",
+      "batch": 18,
+      "purpose": "Multiplayer networking and game backend skill: server authority, client prediction, lag compensation, matchmaking, and anti-cheat."
+    },
+    {
+      "path": "skills/24-networking-backend/references/authority-and-topology.md",
+      "folder": "skills/24-networking-backend",
+      "batch": 18,
+      "purpose": "Dedicated server vs listen-host vs relay, tick rates (20 Hz to 60 Hz), and why client trust is always zero."
+    },
+    {
+      "path": "skills/24-networking-backend/references/prediction-and-reconciliation.md",
+      "folder": "skills/24-networking-backend",
+      "batch": 18,
+      "purpose": "Client-side input prediction, circular input history buffers, server snapshot rollback, and entity interpolation."
+    },
+    {
+      "path": "skills/24-networking-backend/references/bandwidth-and-serialization.md",
+      "folder": "skills/24-networking-backend",
+      "batch": 18,
+      "purpose": "Bit-packing, float quantization, delta compression against acked baselines, and area-of-interest filtering."
+    },
+    {
+      "path": "skills/24-networking-backend/references/matchmaking-and-lobbies.md",
+      "folder": "skills/24-networking-backend",
+      "batch": 18,
+      "purpose": "Session tokens, NAT punchthrough / WebRTC / ENet relays, reconnection grace windows, and rating buckets."
+    },
+    {
+      "path": "skills/24-networking-backend/references/anti-cheat-and-validation.md",
+      "folder": "skills/24-networking-backend",
+      "batch": 18,
+      "purpose": "Server movement speed clamping, fire-rate envelopes, line-of-sight verification, and idempotent economy transactions."
+    },
+    {
+      "path": "skills/24-networking-backend/scripts/bandwidth_calculator.py",
+      "folder": "skills/24-networking-backend",
+      "batch": 18,
+      "purpose": "Computes per-client and server egress kbps from tick rate, player count, packet header overhead, and payload schema."
+    },
+    {
+      "path": "skills/25-ui-audio/SKILL.md",
+      "folder": "skills/25-ui-audio",
+      "batch": 19,
+      "purpose": "Game UI, HUD ergonomics, accessibility compliance, dynamic audio mixing buses, and localization readiness."
+    },
+    {
+      "path": "skills/25-ui-audio/references/hud-and-menu-ergonomics.md",
+      "folder": "skills/25-ui-audio",
+      "batch": 19,
+      "purpose": "5% safe zones, peripheral health readability, full keyboard/gamepad focus navigation, and zero dead clicks."
+    },
+    {
+      "path": "skills/25-ui-audio/references/game-accessibility.md",
+      "folder": "skills/25-ui-audio",
+      "batch": 19,
+      "purpose": "Remappable controls, colorblind-safe iconography, scalable subtitles with speaker tags, screen-shake sliders, and hold-to-toggle options."
+    },
+    {
+      "path": "skills/25-ui-audio/references/audio-buses-and-mixing.md",
+      "folder": "skills/25-ui-audio",
+      "batch": 19,
+      "purpose": "Master/Music/SFX/Voice/UI bus hierarchy, pitch/volume randomization to stop machine-gun fatigue, and sidechain ducking."
+    },
+    {
+      "path": "skills/25-ui-audio/references/spatial-audio-and-music.md",
+      "folder": "skills/25-ui-audio",
+      "batch": 19,
+      "purpose": "3D attenuation curves, low-pass occlusion behind walls, voice limit polyphony, and horizontal/vertical adaptive music stems."
+    },
+    {
+      "path": "skills/25-ui-audio/references/localization-and-typography.md",
+      "folder": "skills/25-ui-audio",
+      "batch": 19,
+      "purpose": "String table keys, +35% UI container expansion for German/French, pluralization rules, and font glyph coverage."
+    },
+    {
+      "path": "skills/25-ui-audio/scripts/check_loc_strings.py",
+      "folder": "skills/25-ui-audio",
+      "batch": 19,
+      "purpose": "Audits localization CSV/JSON files for missing translation keys, mismatched format placeholders ({0}, %s), and overflow length warnings."
+    },
+    {
+      "path": "skills/26-optimization/SKILL.md",
+      "folder": "skills/26-optimization",
+      "batch": 20,
+      "purpose": "Evidence-based performance engineering skill: frame time budgets, CPU vs GPU bottleneck diagnosis, draw calls, shaders, and 4 GB laptop survival."
+    },
+    {
+      "path": "skills/26-optimization/references/frame-budgets-and-profiling.md",
+      "folder": "skills/26-optimization",
+      "batch": 20,
+      "purpose": "16.67 ms (60 FPS) and 33.33 ms (30 FPS LOW preset) millisecond breakdowns; measure 99th percentile frame times before optimizing."
+    },
+    {
+      "path": "skills/26-optimization/references/cpu-vs-gpu-bound-diagnosis.md",
+      "folder": "skills/26-optimization",
+      "batch": 20,
+      "purpose": "The resolution halve test, wireframe/overdraw test, and isolating game thread vs render thread vs VRAM thrashing."
+    },
+    {
+      "path": "skills/26-optimization/references/draw-calls-and-batching.md",
+      "folder": "skills/26-optimization",
+      "batch": 20,
+      "purpose": "Material consolidation, texture atlases, GPU instancing, and keeping LOW preset under 100 draw calls."
+    },
+    {
+      "path": "skills/26-optimization/references/shader-and-overdraw-optimization.md",
+      "folder": "skills/26-optimization",
+      "batch": 20,
+      "purpose": "Alpha-test/blend overdraw cost on Intel UHD integrated GPUs, tightly fitted particle quads, and LUT replacements for heavy math."
+    },
+    {
+      "path": "skills/26-optimization/references/memory-and-vram-footprints.md",
+      "folder": "skills/26-optimization",
+      "batch": 20,
+      "purpose": "VRAM compression formats (BCn/ETC2/ASTC), stripping unused mip levels, and staying under 1.5 GB process RAM on a 4 GB machine."
+    },
+    {
+      "path": "skills/26-optimization/references/culling-and-streaming.md",
+      "folder": "skills/26-optimization",
+      "batch": 20,
+      "purpose": "Frustum culling, occlusion portals, HLOD clusters, and distance-based tick throttling for off-screen AI."
+    },
+    {
+      "path": "skills/26-optimization/templates/PERF_REPORT.md",
+      "folder": "skills/26-optimization",
+      "batch": 20,
+      "purpose": "Before/after profiling report template logging hardware, scene, p50/p99 frame time, draw calls, RAM/VRAM, and bottleneck proof."
+    },
+    {
+      "path": "skills/26-optimization/scripts/analyze_frame_times.py",
+      "folder": "skills/26-optimization",
+      "batch": 20,
+      "purpose": "Parses a CSV of raw frame durations (ms) and outputs p50, p95, p99, hitch counts (>33.3 ms), and pass/fail against 30/60 FPS gates."
+    },
+    {
+      "path": "skills/27-production-qa-release/SKILL.md",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Game production, scoping, playtesting, automated smoke tests, GitHub Actions Windows/Linux/Web builds, and store release checklists."
+    },
+    {
+      "path": "skills/27-production-qa-release/references/milestones-and-scoping.md",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Prototype -> Vertical Slice -> Alpha (feature complete) -> Beta (content complete) -> Gold, and ruthless scope cutting."
+    },
+    {
+      "path": "skills/27-production-qa-release/references/playtesting-protocol.md",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Silent observation rules, input telemetry logging, time-to-first-objective metrics, and separating symptom from root design cause."
+    },
+    {
+      "path": "skills/27-production-qa-release/references/qa-and-bug-triage.md",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Blocker/Critical/Major/Minor severity definitions, deterministic repro steps, and automated headless boot/scene-load smoke tests."
+    },
+    {
+      "path": "skills/27-production-qa-release/references/cloud-windows-builds.md",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Compiling Windows .exe and Linux/Web builds on GitHub Actions runners so the user's 4 GB laptop never runs heavy local toolchains."
+    },
+    {
+      "path": "skills/27-production-qa-release/references/crash-reporting-and-patching.md",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Local crash logs, symbolication, semantic versioning, save-compatibility tests before hotfixing, and rollback plans."
+    },
+    {
+      "path": "skills/27-production-qa-release/references/store-release-readiness.md",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Steam / itch.io depot structure, clean-machine boot check, redistributables, controller glyphs, and legal/license notices."
+    },
+    {
+      "path": "skills/27-production-qa-release/templates/MILESTONE_GATE.md",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Milestone exit checklist verifying core loop, performance budget, crash-free soak, and cut list before advancing."
+    },
+    {
+      "path": "skills/27-production-qa-release/templates/BUG_REPORT.md",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Structured bug report with build hash, hardware preset, deterministic steps, expected vs actual, and log snippet."
+    },
+    {
+      "path": "skills/27-production-qa-release/templates/github_godot_release.yml",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Ready-to-use GitHub Actions workflow that exports Windows, Linux, and Web Godot builds and uploads release archives."
+    },
+    {
+      "path": "skills/27-production-qa-release/scripts/package_release_check.py",
+      "folder": "skills/27-production-qa-release",
+      "batch": 21,
+      "purpose": "Audits a build output folder for debug symbols, banned dev secrets, missing license files, and archive size limits."
+    },
+    {
+      "path": "skills/30-architecture/SKILL.md",
+      "folder": "skills/30-architecture",
+      "batch": 22,
+      "purpose": "Principal software architecture skill: system boundaries, data structures, design patterns, API contracts, concurrency, and safe refactoring."
+    },
+    {
+      "path": "skills/30-architecture/references/system-design-principles.md",
+      "folder": "skills/30-architecture",
+      "batch": 22,
+      "purpose": "High cohesion, loose coupling, separating pure domain logic from I/O edges, and choosing boring proven technology."
+    },
+    {
+      "path": "skills/30-architecture/references/design-patterns-pragmatic.md",
+      "folder": "skills/30-architecture",
+      "batch": 22,
+      "purpose": "When to use Strategy, Command, State, Adapter, and Observer—and when patterns are premature over-engineering."
+    },
+    {
+      "path": "skills/30-architecture/references/data-structures-and-complexity.md",
+      "folder": "skills/30-architecture",
+      "batch": 22,
+      "purpose": "Cache locality, hash maps vs contiguous vectors, queues, ring buffers, graphs, and Big-O reality checks at actual N."
+    },
+    {
+      "path": "skills/30-architecture/references/api-and-contract-design.md",
+      "folder": "skills/30-architecture",
+      "batch": 22,
+      "purpose": "Explicit schemas, idempotency, pagination, backward-compatible evolution, and machine-readable error envelopes."
+    },
+    {
+      "path": "skills/30-architecture/references/error-handling-and-resilience.md",
+      "folder": "skills/30-architecture",
+      "batch": 22,
+      "purpose": "Fail-fast validation at boundaries, typed results vs exceptions, timeouts, retries with jitter, and never swallowing errors."
+    },
+    {
+      "path": "skills/30-architecture/references/concurrency-and-async.md",
+      "folder": "skills/30-architecture",
+      "batch": 22,
+      "purpose": "Immutability, message passing over shared mutable state, cancellation propagation, and backpressure queues."
+    },
+    {
+      "path": "skills/30-architecture/references/refactoring-legacy-code.md",
+      "folder": "skills/30-architecture",
+      "batch": 22,
+      "purpose": "Characterization tests first, strangler fig migration, small atomic commits, and never mixing refactoring with behavior changes."
+    },
+    {
+      "path": "skills/30-architecture/templates/ADR_TEMPLATE.md",
+      "folder": "skills/30-architecture",
+      "batch": 22,
+      "purpose": "Architecture Decision Record template with status, problem constraints, considered alternatives, decision, and consequences."
+    },
+    {
+      "path": "skills/31-languages/SKILL.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "Idiomatic engineering guide and footgun prevention across Python, TypeScript/JS, C++, C#, GDScript, GLSL, SQL, POSIX Shell, and Rust."
+    },
+    {
+      "path": "skills/31-languages/references/python.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "Python 3.10+ type hints, pathlib, argparse, dataclasses, context managers, subprocess safety, and mutable default traps."
+    },
+    {
+      "path": "skills/31-languages/references/javascript-typescript.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "Strict TypeScript, discriminated unions, unhandled promise rejections, AbortController, and avoiding memory leaks in closures."
+    },
+    {
+      "path": "skills/31-languages/references/cpp.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "Modern C++20 RAII, smart pointers vs spans/views, Rule of 0/5, UB sanitizers, and compiling on GitHub Actions."
+    },
+    {
+      "path": "skills/31-languages/references/csharp.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "C# nullable reference types, Span<T>, struct allocation rules to avoid GC spikes in game loops, and async/await cancellation."
+    },
+    {
+      "path": "skills/31-languages/references/gdscript.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "Godot 4 static typing (`var x: float := 1.0`), signal connection hygiene, `@onready`, and hot-loop performance traps."
+    },
+    {
+      "path": "skills/31-languages/references/glsl-shaders.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "Branchless math (`step`, `smoothstep`, `mix`), derivative discontinuities (`dFdx`), precision qualifiers, and mobile/iGPU cost."
+    },
+    {
+      "path": "skills/31-languages/references/sql.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "Parameterized queries, composite index ordering, EXPLAIN ANALYZE verification, transactions, and N+1 elimination."
+    },
+    {
+      "path": "skills/31-languages/references/shell-posix.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "`set -euo pipefail`, variable quoting, temp file cleanup via `trap`, and when to switch from bash to Python (>50 lines)."
+    },
+    {
+      "path": "skills/31-languages/references/rust.md",
+      "folder": "skills/31-languages",
+      "batch": 23,
+      "purpose": "Ownership at API boundaries, `Result`/`thiserror` vs `.unwrap()`, zero-copy slices, and Clippy pedantic enforcement."
+    },
+    {
+      "path": "skills/32-web-backend-data/SKILL.md",
+      "folder": "skills/32-web-backend-data",
+      "batch": 24,
+      "purpose": "Full-stack web, backend services, authentication, relational databases, caching, and observability skill."
+    },
+    {
+      "path": "skills/32-web-backend-data/references/frontend-architecture.md",
+      "folder": "skills/32-web-backend-data",
+      "batch": 24,
+      "purpose": "Semantic accessible HTML, explicit loading/empty/error states, URL-driven state, and bundle budgets for 4 GB laptops."
+    },
+    {
+      "path": "skills/32-web-backend-data/references/http-services-and-apis.md",
+      "folder": "skills/32-web-backend-data",
+      "batch": 24,
+      "purpose": "Status codes, validation middleware, request IDs, rate limiting, and graceful shutdown."
+    },
+    {
+      "path": "skills/32-web-backend-data/references/authentication-and-sessions.md",
+      "folder": "skills/32-web-backend-data",
+      "batch": 24,
+      "purpose": "Argon2id password hashing, HttpOnly/Secure/SameSite cookies, OAuth PKCE flows, and server-side RBAC checks on every route."
+    },
+    {
+      "path": "skills/32-web-backend-data/references/database-modeling-and-migrations.md",
+      "folder": "skills/32-web-backend-data",
+      "batch": 24,
+      "purpose": "Foreign keys, NOT NULL constraints, UTC timestamps, reversible expand-contract migrations, and connection pooling."
+    },
+    {
+      "path": "skills/32-web-backend-data/references/caching-and-queues.md",
+      "folder": "skills/32-web-backend-data",
+      "batch": 24,
+      "purpose": "Cache-aside TTLs, stampede protection, idempotent background jobs, and dead-letter queues."
+    },
+    {
+      "path": "skills/32-web-backend-data/references/realtime-websockets-sse.md",
+      "folder": "skills/32-web-backend-data",
+      "batch": 24,
+      "purpose": "Heartbeats, exponential backoff reconnection, state resync on reconnect, and message size caps."
+    },
+    {
+      "path": "skills/32-web-backend-data/references/observability-and-health.md",
+      "folder": "skills/32-web-backend-data",
+      "batch": 24,
+      "purpose": "Structured JSON logs with correlation IDs, RED metrics (Rate, Errors, Duration), and `/healthz` readiness checks."
+    },
+    {
+      "path": "skills/32-web-backend-data/scripts/sqlite_migration_runner.py",
+      "folder": "skills/32-web-backend-data",
+      "batch": 24,
+      "purpose": "Transactional SQLite migration runner using Python standard library `sqlite3` with schema version tracking and checksum verification."
+    },
+    {
+      "path": "skills/33-testing-debugging/SKILL.md",
+      "folder": "skills/33-testing-debugging",
+      "batch": 25,
+      "purpose": "Testing strategy, deterministic unit/integration suites, scientific root-cause debugging, and structured diagnostic logging."
+    },
+    {
+      "path": "skills/33-testing-debugging/references/testing-strategy-and-pyramid.md",
+      "folder": "skills/33-testing-debugging",
+      "batch": 25,
+      "purpose": "Fast pure-logic unit tests, real-database integration tests, minimal critical-path E2E checks, and banning flaky sleeps."
+    },
+    {
+      "path": "skills/33-testing-debugging/references/unit-and-property-testing.md",
+      "folder": "skills/33-testing-debugging",
+      "batch": 25,
+      "purpose": "Boundary values, invariant properties, seeded PRNG determinism, and testing behavior rather than private mocks."
+    },
+    {
+      "path": "skills/33-testing-debugging/references/integration-and-contract-testing.md",
+      "folder": "skills/33-testing-debugging",
+      "batch": 25,
+      "purpose": "Testing HTTP/CLI entry points, temporary filesystem sandboxes, and verifying error responses."
+    },
+    {
+      "path": "skills/33-testing-debugging/references/root-cause-debugging-method.md",
+      "folder": "skills/33-testing-debugging",
+      "batch": 25,
+      "purpose": "Reproduce deterministically -> bisect -> form falsifiable hypothesis -> log/assert -> write regression test before fixing."
+    },
+    {
+      "path": "skills/33-testing-debugging/references/structured-logging-and-tracing.md",
+      "folder": "skills/33-testing-debugging",
+      "batch": 25,
+      "purpose": "What to log at ERROR/WARN/INFO/DEBUG, PII redaction, and correlation context."
+    },
+    {
+      "path": "skills/33-testing-debugging/references/memory-and-concurrency-bugs.md",
+      "folder": "skills/33-testing-debugging",
+      "batch": 25,
+      "purpose": "Diagnosing race conditions, deadlocks, unbounded caches, and event listener leaks."
+    },
+    {
+      "path": "skills/33-testing-debugging/templates/POSTMORTEM.md",
+      "folder": "skills/33-testing-debugging",
+      "batch": 25,
+      "purpose": "Blameless root-cause postmortem template with timeline, trigger, 5 Whys, regression test added, and systemic safeguard."
+    },
+    {
+      "path": "skills/33-testing-debugging/scripts/run_test_suite.py",
+      "folder": "skills/33-testing-debugging",
+      "batch": 25,
+      "purpose": "Discovers and executes `unittest` tests across a project with fail-fast, timing breakdown, and JSON report output."
+    },
+    {
+      "path": "skills/34-security/SKILL.md",
+      "folder": "skills/34-security",
+      "batch": 26,
+      "purpose": "Defensive application security skill: secret hygiene, boundary input validation, injection prevention, dependency auditing, and safe file handling."
+    },
+    {
+      "path": "skills/34-security/references/secrets-and-configuration.md",
+      "folder": "skills/34-security",
+      "batch": 26,
+      "purpose": "Environment variables, `.env.example` templates, secret rotation, and keeping keys out of git history and client bundles."
+    },
+    {
+      "path": "skills/34-security/references/input-validation-and-injection.md",
+      "folder": "skills/34-security",
+      "batch": 26,
+      "purpose": "Allowlist schema validation, parameterized SQL, safe subprocess argv arrays (`shell=False`), and context-aware output encoding."
+    },
+    {
+      "path": "skills/34-security/references/authz-and-access-control.md",
+      "folder": "skills/34-security",
+      "batch": 26,
+      "purpose": "Deny-by-default authorization, object-level ownership checks (IDOR prevention), and CSRF protection."
+    },
+    {
+      "path": "skills/34-security/references/dependency-and-supply-chain.md",
+      "folder": "skills/34-security",
+      "batch": 26,
+      "purpose": "Lockfiles, minimal dependency footprint, pinned GitHub Actions SHAs, and vulnerability triage."
+    },
+    {
+      "path": "skills/34-security/references/file-and-path-safety.md",
+      "folder": "skills/34-security",
+      "batch": 26,
+      "purpose": "Preventing path traversal (`Path.resolve().is_relative_to(base)`), zip-slip extraction bombs, and unrestricted file uploads."
+    },
+    {
+      "path": "skills/34-security/scripts/secret_scanner.py",
+      "folder": "skills/34-security",
+      "batch": 26,
+      "purpose": "Scans workspace files for accidentally committed API keys, private keys, tokens, and high-entropy credential assignments."
+    },
+    {
+      "path": "skills/35-devops-ci/SKILL.md",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "Git hygiene, GitHub Actions CI/CD, off-laptop Windows/Linux cross-compilation, reproducible packaging, and release automation."
+    },
+    {
+      "path": "skills/35-devops-ci/references/git-workflow-and-hygiene.md",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "Atomic commits, trunk-based short-lived branches, `.gitignore` rules for 3D/game caches, and bisect-friendly history."
+    },
+    {
+      "path": "skills/35-devops-ci/references/github-actions-pipelines.md",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "Matrix builds, dependency caching, artifact retention, concurrency cancellation, and least-privilege `GITHUB_TOKEN` permissions."
+    },
+    {
+      "path": "skills/35-devops-ci/references/cloud-builds-for-low-spec-laptops.md",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "Offloading Windows `.exe` compilation (PyInstaller, Rust, C++, Godot) to GitHub Actions and fetching build artifacts."
+    },
+    {
+      "path": "skills/35-devops-ci/references/packaging-and-distribution.md",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "Deterministic zip/tar archives, SHA-256 checksum manifests, `pyproject.toml`, and self-contained CLI distributions."
+    },
+    {
+      "path": "skills/35-devops-ci/references/containers-and-reproducibility.md",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "Multi-stage Dockerfiles, non-root runtime users, pinned base digests, and `.dockerignore` hygiene."
+    },
+    {
+      "path": "skills/35-devops-ci/references/release-and-rollback.md",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "Semantic versioning, automated changelog extraction, smoke-tested deployments, and 1-command rollback."
+    },
+    {
+      "path": "skills/35-devops-ci/templates/github_ci_python.yml",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "GitHub Actions workflow running linting, unit tests, and Windows/Linux executable packaging on push and tag."
+    },
+    {
+      "path": "skills/35-devops-ci/templates/github_ci_web.yml",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "GitHub Actions workflow for TypeScript/Three.js web projects running typechecks, unit tests, and bundle size verification."
+    },
+    {
+      "path": "skills/35-devops-ci/scripts/checksum_manifest.py",
+      "folder": "skills/35-devops-ci",
+      "batch": 27,
+      "purpose": "Generates and verifies SHA-256 checksum files (`SHA256SUMS.txt`) for release deliverables."
+    },
+    {
+      "path": "skills/36-code-review/SKILL.md",
+      "folder": "skills/36-code-review",
+      "batch": 28,
+      "purpose": "Principal engineer code review skill with defect severity classification, multi-pillar checklists, and automated pre-review checks."
+    },
+    {
+      "path": "skills/36-code-review/references/review-method-and-triage.md",
+      "folder": "skills/36-code-review",
+      "batch": 28,
+      "purpose": "Two-pass review method: architecture & failure modes first, line-by-line correctness second, zero bikeshedding."
+    },
+    {
+      "path": "skills/36-code-review/references/severity-classification.md",
+      "folder": "skills/36-code-review",
+      "batch": 28,
+      "purpose": "BLKR (data loss, security, silent CPU fallback, broken build), MAJR (edge-case bug, leak), MINR (clarity), NIT (optional)."
+    },
+    {
+      "path": "skills/36-code-review/references/pillar-review-checklists.md",
+      "folder": "skills/36-code-review",
+      "batch": 28,
+      "purpose": "Specialized review gates for Blender Python scripts, Three.js/Godot gameplay code, and backend/CLI software."
+    },
+    {
+      "path": "skills/36-code-review/templates/CODE_REVIEW_REPORT.md",
+      "folder": "skills/36-code-review",
+      "batch": 28,
+      "purpose": "Structured review report template listing verdict, blockers, major defects with file:line and fix, and verification run."
+    },
+    {
+      "path": "skills/36-code-review/scripts/pre_review_scan.py",
+      "folder": "skills/36-code-review",
+      "batch": 28,
+      "purpose": "Scans modified Python/JS/GD files for TODO placeholders, bare excepts, missing docstrings/help flags, and oversized functions."
+    },
+    {
+      "path": "examples/01-cycles-studio-still/BRIEF_AND_BARS.md",
+      "folder": "examples",
+      "batch": 29,
+      "purpose": "Example 1 (Cycles studio still): brief, measurable realism bars, fake-3D audit, and Colab execution guide for a macro mechanical chronometer."
+    },
+    {
+      "path": "examples/01-cycles-studio-still/build_still_scene.py",
+      "folder": "examples",
+      "batch": 29,
+      "purpose": "Complete headless Blender Python script that procedurally models, bevels, textures, lights (3-point physical + AgX), and configures Cycles OptiX for the studio still."
+    },
+    {
+      "path": "examples/01-cycles-studio-still/audit_still.py",
+      "folder": "examples",
+      "batch": 29,
+      "purpose": "Verifies the generated still scene metrics (bevels, metric scale, camera DOF, AgX transform, material albedo/roughness bounds)."
+    },
+    {
+      "path": "examples/02-60s-trailer/TRAILER_PLAN.md",
+      "folder": "examples",
+      "batch": 29,
+      "purpose": "Example 2 (60s cinematic trailer): 1440-frame beat sheet, shot lens chart, Colab batch budget, and sound stem map."
+    },
+    {
+      "path": "examples/02-60s-trailer/generate_trailer_shots.py",
+      "folder": "examples",
+      "batch": 29,
+      "purpose": "Headless Blender Python script that sets up camera markers, animated dolly shots, and per-shot output ranges for the 60s trailer."
+    },
+    {
+      "path": "examples/02-60s-trailer/master_trailer.py",
+      "folder": "examples",
+      "batch": 29,
+      "purpose": "Validates rendered shot folders against the beat sheet and invokes FFmpeg to cut, normalize (-14 LUFS), and encode the 60s master."
+    },
+    {
+      "path": "examples/03-vfx-shot/VFX_SHOT_SPEC.md",
+      "folder": "examples",
+      "batch": 29,
+      "purpose": "Example 3 (VFX shot): fractured containment core with volumetric plasma, debris particles, AOV passes, and T4 VRAM ceiling."
+    },
+    {
+      "path": "examples/03-vfx-shot/build_vfx_shot.py",
+      "folder": "examples",
+      "batch": 29,
+      "purpose": "Headless Blender Python script creating rigid-body debris, volumetric emission shader, multi-layer EXR passes, and compositor glare/grain."
+    },
+    {
+      "path": "examples/03-vfx-shot/verify_vfx_budget.py",
+      "folder": "examples",
+      "batch": 29,
+      "purpose": "Audits the VFX shot configuration for particle counts, volume step sizes, bounce caps, and cache disk estimates."
+    },
+    {
+      "path": "examples/04-threejs-story-scene/README.md",
+      "folder": "examples",
+      "batch": 30,
+      "purpose": "Example 4 (Playable Three.js story scene): architecture, LOW preset laptop verification, baked lighting notes, and controls."
+    },
+    {
+      "path": "examples/04-threejs-story-scene/index.html",
+      "folder": "examples",
+      "batch": 30,
+      "purpose": "Standalone playable 3D interactive story scene with LOW/HIGH preset switcher, accessible HUD, and canvas container."
+    },
+    {
+      "path": "examples/04-threejs-story-scene/scene_story.js",
+      "folder": "examples",
+      "batch": 30,
+      "purpose": "Complete Three.js interactive scene script with hotspots, camera transitions, branching dialogue state machine, and localStorage save."
+    },
+    {
+      "path": "examples/05-godot-micro-game/GAME_SPEC.md",
+      "folder": "examples",
+      "batch": 30,
+      "purpose": "Example 5 (Small Godot 4 game): core loop, metric rules, Compatibility renderer setup for 1 GB Intel UHD, and GitHub Actions build instructions."
+    },
+    {
+      "path": "examples/05-godot-micro-game/project.godot",
+      "folder": "examples",
+      "batch": 30,
+      "purpose": "Godot 4 project configuration locked to gl_compatibility renderer, action mappings, and 60 FPS physics tick."
+    },
+    {
+      "path": "examples/05-godot-micro-game/arena_controller.gd",
+      "folder": "examples",
+      "batch": 30,
+      "purpose": "Complete GDScript gameplay controller implementing player movement, dash i-frames, pooled projectiles, wave director, and score HUD signals."
+    },
+    {
+      "path": "examples/06-cli-app/README.md",
+      "folder": "examples",
+      "batch": 30,
+      "purpose": "Example 6 (Tested CLI app): render farm manifest & frame budget CLI manager specification and usage guide."
+    },
+    {
+      "path": "examples/06-cli-app/render_ledger.py",
+      "folder": "examples",
+      "batch": 30,
+      "purpose": "Production Python CLI tool (`--help`, subcommands, atomic JSON storage, cost/hour estimator) managing offline render jobs."
+    },
+    {
+      "path": "examples/06-cli-app/test_render_ledger.py",
+      "folder": "examples",
+      "batch": 30,
+      "purpose": "Deterministic `unittest` test suite covering CLI argument parsing, frame resume math, budget threshold alerts, and corrupt file recovery."
+    },
+    {
+      "path": "evals/eval_01_cycles_optix_still.md",
+      "folder": "evals",
+      "batch": 31,
+      "purpose": "Evaluation task 1: create and verify a photoreal Cycles OptiX studio still script with strict pass/fail realism and GPU proof gates."
+    },
+    {
+      "path": "evals/eval_02_colab_trailer_pipeline.md",
+      "folder": "evals",
+      "batch": 31,
+      "purpose": "Evaluation task 2: plan and script a resumable multi-shot trailer render pipeline under a 3-hour T4 GPU budget."
+    },
+    {
+      "path": "evals/eval_03_threejs_low_preset.md",
+      "folder": "evals",
+      "batch": 31,
+      "purpose": "Evaluation task 3: build an interactive Three.js story scene that passes the 4 GB RAM / 1 GB Intel UHD LOW preset draw-call and disposal gates."
+    },
+    {
+      "path": "evals/eval_04_game_combat_loop.md",
+      "folder": "evals",
+      "batch": 31,
+      "purpose": "Evaluation task 4: design and implement a combat controller + ticketed enemy AI loop with Monte Carlo TTK verification."
+    },
+    {
+      "path": "evals/eval_05_secure_cli_and_ci.md",
+      "folder": "evals",
+      "batch": 31,
+      "purpose": "Evaluation task 5: build a zero-dependency tested Python CLI tool with path-traversal protection and a GitHub Actions Windows build workflow."
+    },
+    {
+      "path": "evals/eval_06_code_and_render_audit.md",
+      "folder": "evals",
+      "batch": 31,
+      "purpose": "Evaluation task 6: run a combined fake-3D visual audit and BLKR/MAJR code review on a flawed project submission."
+    },
+    {
+      "path": "tools/pack.py",
+      "folder": "tools",
+      "batch": 31,
+      "purpose": "Runs tools/validate.py and packages all 288 verified files into deterministic UltraSkill-1.0.0.zip."
+    }
+  ]
+}
